@@ -161,7 +161,7 @@ The network traffic analysis revealed normal system and user activity, primarily
 
 ## 👨‍💻 Author
 
-Basanth
+Basanth Kumar
 
 Aspiring SOC Analyst | Cybersecurity Enthusiast
 
