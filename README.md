@@ -1,4 +1,3 @@
-
 # 🚨 Network Traffic Analysis & Threat Detection (SOC Lab)
 
 ## 📌 Project Overview
