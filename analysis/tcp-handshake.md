@@ -8,10 +8,10 @@ To analyze TCP connection establishment behavior and identify any abnormal patte
 
 ## 🧪 Filter Used
 
-Primary:
+Primary : 
 tcp.flags.syn == 1
 
-Additional:
+Additional : 
 tcp.flags.syn == 1 || tcp.flags.ack == 1
 
 ---
