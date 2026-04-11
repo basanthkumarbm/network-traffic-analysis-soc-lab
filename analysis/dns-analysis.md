@@ -27,7 +27,6 @@ dns
 
   * `accounts.google.com`
   * `linkedin.com`
-  * `client.protecths.net`
 
 ---
 
