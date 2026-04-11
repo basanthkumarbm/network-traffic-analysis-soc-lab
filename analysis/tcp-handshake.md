@@ -8,11 +8,30 @@ To analyze TCP connection establishment behavior and identify any abnormal patte
 
 ## 🧪 Filter Used
 
-Primary : 
-tcp.flags.syn == 1
+### Primary Filter
 
-Additional : 
+```bash
+tcp.flags.syn == 1
+```
+
+Used to identify TCP connection initiation packets (SYN).
+
+---
+
+### Secondary Filter
+
+```bash
 tcp.flags.syn == 1 || tcp.flags.ack == 1
+```
+
+Used to analyze full TCP handshake including SYN, SYN-ACK, and ACK packets.
+
+---
+
+## 🧠 Analyst Note
+
+Instead of relying on static sequence or acknowledgment numbers, TCP flags were used for reliable identification of handshake behavior, which aligns with standard SOC analysis practices.
+
 
 ---
 
@@ -77,6 +96,31 @@ Client → Server → ACK
 * Traffic reflects normal user activity (web browsing)
 * Proper TCP session establishment confirms healthy communication
 * No suspicious patterns or anomalies identified
+
+---
+
+## 📸 Evidence
+
+The following screenshot demonstrates TCP handshake analysis in Wireshark:
+
+* SYN packets initiating connections
+* SYN-ACK responses from server
+* ACK packets completing the handshake
+
+Screenshot reference:
+`screenshots/tcp-handshake.png`
+
+---
+
+## 🔎 Key Takeaway
+
+The presence of complete TCP 3-way handshakes across multiple sessions confirms:
+
+* Stable network communication
+* No abnormal connection attempts
+* No signs of SYN flood or half-open connections
+
+This aligns with expected behavior in normal user-driven network activity.
 
 ---
 
